@@ -1,0 +1,16 @@
+This is a blog about raster data visualization using Python. Several ways are available for raster data to be opened and visualized in Python using different packages.
+
+Use rasterio package and cv2 (OpenCV) for raster data visualzion. Here I will show you how
+
+#python and matplotlib libraries
+import numpy as np
+import matplotlib.pyplot as plt
+
+#geospatial libraries
+import rasterio
+
+imgRaster = rasterio.open(‘LC09_B5.TIF’)
+im = imgRaster.read(1)
+fig = plt.figure(figsize=(12,8))
+plt.imshow(im)
+plt.show()
